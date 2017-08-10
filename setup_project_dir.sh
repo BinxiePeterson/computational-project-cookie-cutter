@@ -15,7 +15,7 @@ if [ ! -d "$1" ]; then
     mkdir $1
 fi
 cd $1
-mkdir doc data src bin results
+mkdir doc data src bin tmp results
 
 cd doc
 echo "Doc directory with one subdirectory per manuscript" > README
@@ -26,11 +26,15 @@ echo "Data directory for storing fixed data sets" > README
 touch .gitkeep
 
 cd ../src
-echo "src for source code" > README
+echo "Src directory for source code" > README
 touch .gitkeep
 
 cd ../bin
-echo "bin for compiled binaries or scripts" > README
+echo "Bin directory for compiled binaries or scripts" > README
+touch .gitkeep
+
+cd ../tmp
+echo "Tmp directory for temporary files that don't need to be stored long-term" > README
 touch .gitkeep
 
 cd ../results
@@ -47,23 +51,25 @@ A cookie cutter (aka project template) to set up a folder structure for a comput
 This is a quick way to setup a folder structure that follows one standard to organize a project.
 This helps with project management, reproducibility, sharing, and publishing your data, analysis, and results.
 
-This project was inspired (and modeled off) by:
+This project was forked from chendaniely, originally inspired (and modeled off) by:
 
 [Noble WS 2009 A Quick Guide to Organizing Computational Biology Projects. PLoS Comput Biol 5 7: e1000424. doi:10.1371/journal.pcbi.1000424](http://dx.doi.org/10.1371/journal.pcbi.1000424)
 
 ## What it does
-the \`setup_project_dir.sh\` script creates the following folder structure:
+The \`setup_project_dir.sh\` script creates the following folder structure:
 
     Path_Provided
     |- doc/           # directory for documentation, one subdirectory for manuscript
     |
-    |- data/          # data for storing fixed data sets
+    |- data/          # directory for storing fixed data sets
     |
-    |- src/           # any source code
+    |- src/           # directory for any source code
     |
-    |- bin/           # any compiled binaries or scripts
+    |- bin/           # directory for any compiled binaries or scripts
     |
-    |- results/       # output for tracking computational experiments performed on data
+    |- tmp/           # directory for temporary files that don't need to be stored long-term
+    |
+    |- results/       # directory for output for tracking computational experiments performed on data
 
 A README containing a brief blurb is placed in each folder.
 This is because git will not track empty folders and placing a README will
