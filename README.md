@@ -16,13 +16,15 @@ the `setup_project_dir.sh` script creates the following folder structure:
     Path_Provided
     |- doc/           # directory for documentation, one subdirectory for manuscript
     |
-    |- data/          # data for storing fixed data sets
+    |- data/          # directory for storing fixed data sets
     |
-    |- src/           # any source code
+    |- src/           # directory for any source code
     |
-    |- bin/           # any compiled binaries or scripts
+    |- bin/           # directory for any compiled binaries or scripts
     |
-    |- results/       # output for tracking computational experiments performed on data
+    |- tmp/           # directory for temporary files that don't need to be stored long-term
+    |
+    |- results/       # directory for output for tracking computational experiments performed on data
 
 A README containing a brief blurb is placed in each folder.
 This is because git will not track empty folders and placing a README will
@@ -30,19 +32,19 @@ remind you of what goes in each folder, and also the overall
 folder structure will be retained
 
 ## How to install
-There are a few ways set everything up.
+There are a few ways set everything up:
 
 1.  fork/clone the repo to your computer
 2.  download and extract the zip on the right
 3.  download the script by clicking on `setup_project_dir.sh` above and `right-click` > `save link as...` on the `raw` button
-4.  downloading the script directly: `wget https://github.com/chendaniely/computational-project-cookie-cutter/raw/master/setup_project_dir.sh`
+4.  downloading the script directly: `wget https://github.com/BinxiePeterson/computational-project-cookie-cutter/raw/master/setup_project_dir.sh`
 
-The above methods all accomplish the same thing, it gets the script onto your computer.
+The above methods all accomplish the same thing: it gets the script onto your computer.
 Use which ever one makes sense.
 
 ## How to use
-go to the directory where the `setup_project_dir.sh`
-is and run the following line in your terminal
+Go to the directory where the `setup_project_dir.sh`
+is and run the following line in your terminal:
 
 `bash setup_project_dir.sh /directory/to/where/your/project/is`
 
